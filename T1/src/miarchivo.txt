@@ -1,0 +1,4 @@
+La principal diferencia entre C y C++ es que C++ es una extensión de C que admite programación orientada a objetos, mientras que C se centra en la programación procedural.
+La principal diferencia es que un compilador traduce todo el programa a código máquina antes de su ejecución, mientras que un intérprete ejecuta el código línea por línea en tiempo real.
+Un namespace en C++ es un espacio de nombres que se utiliza para evitar conflictos de nombres entre las variables, funciones y clases. Ayuda a organizar y estructurar el código al proporcionar un alcance separado para elementos relacionados.
+Declarar una variable significa definir su tipo y nombre, reservando memoria para ella. Inicializar una variable significa asignarle un valor específico en el momento de la declaración.
