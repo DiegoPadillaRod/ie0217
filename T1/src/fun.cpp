@@ -1,4 +1,4 @@
-#include "header.hpp"
+#include "fun.h"
 #include <iostream>
 #include <sstream>
 using namespace std;
@@ -8,11 +8,19 @@ QA::QA (string question, string answer) {
     this->respuesta = answer;
 }
 
-
+bool QA::match(std::string matcheo){
+    size_t posicion = pregunta.find(matcheo);
+    size_t posicion2 = respuesta.find(matcheo);
+    if (posicion != std::string::npos || posicion2 != std::string::npos) {
+        return true;
+    }
+    return false;
+}
 
 string QA::toString (){
     stringstream r;
-    r << respuesta << endl;
+    r <<"La pregunta es: "<<pregunta<<endl;
+    r << "R/ "<< respuesta << endl;
     return r.str ();
 }
 
