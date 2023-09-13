@@ -29,4 +29,4 @@
 29. Que es un programa deamon?,Un programa deamon (o demonio) es un proceso en segundo plano que se ejecuta de forma continua y sin intervención del usuario, generalmente utilizado para tareas de servicio o administración en sistemas operativos Unix y similares.
 30. Que es un cross-compiler?,Un cross-compiler genera código para plataformas diferentes de la del compilador.
 31. Que es un proceso?,Un proceso es un programa en ejecución en un sistema operativo, que tiene su propio espacio de memoria y recursos asignados, y puede realizar tareas específicas de manera independiente.
-32. Que es un thread?,Un thread (hilo) es una unidad de ejecución más pequeña dentro de un proceso, que permite que múltiples tareas se ejecuten de manera concurrente dentro de un programa.
+32. Que es un thread?,Un thread (hilo) es una unidad de ejecución más pequeña dentro de un proceso, que permite que múltiples tareas se ejecuten de manera concurrente dentro de un programa.0

@@ -1,4 +1,4 @@
-all: executable execute clean
+all: executable execute
 
 executable: main.o fun.o
 	g++ -o Preguntas main.o fun.o
@@ -11,6 +11,3 @@ fun.o:
 
 execute:
 	./Preguntas
-
-clean:
-	rm -f *.o Preguntas

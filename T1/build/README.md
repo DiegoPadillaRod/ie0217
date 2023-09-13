@@ -8,7 +8,7 @@
 ```
 cd .\T1\src\
 chcp 65001
-make
+make all
 ```
 
 

@@ -1,19 +1,25 @@
+/*
+ * @file main.cpp
+ * @authors Diego Padilla.
+ * @date 13/9/2023
+ */
 #include "fun.h"
 #include <iostream>
-#include <vector>
+#include <vector> // Para acceder a la informacion del .txt
 #include <stdio.h>
 #include <fstream>
 #include <cstdlib>
-using namespace std;
+using namespace std; // Nos permite usar cout
 
+// Funcion encargada de preguntar al usuario
 void respuestaAPregunta(vector <QA> vec){
     system("cls");
-    string PalOPreg;
-    cout << "Por favor, introduzca una pregunta o palabra clave:" ;
-    cin >> PalOPreg;
+    string Preg;
+    cout << "Por favor, introduzca una pregunta o palabra clave:" ; 
+    cin >> Preg;
     bool bandera = false;
     for(QA qa : vec){
-        if(qa.match(PalOPreg)){
+        if(qa.match(Preg)){
             cout<<"Respuesta/ "<< qa.respuesta << endl;
             bandera = true;
             system("pause");
@@ -26,7 +32,7 @@ void respuestaAPregunta(vector <QA> vec){
     system("pause");
 
 }
-
+// Funcion que se encarga de mostrar la informacion de cada pregunta
 void preguntas(vector <QA> vec)
 {
     int seleccion;
@@ -40,7 +46,7 @@ void preguntas(vector <QA> vec)
                 cout<<Qa.pregunta<<endl;
             }
             cout << "\t0. SALIR" << endl;
-            cout << "\n\tIngrese una opcion: ";
+            cout << "\n\tQue quieres saber: ";
             cin >> seleccion;
             if (seleccion != 0){
                 cout<< vec.at(seleccion-1).toString()<<endl;
@@ -53,6 +59,7 @@ void preguntas(vector <QA> vec)
     } while (completo);
 }
 
+// Funcion encargada de extraer la informacion almacenada en el .txt
 void RecuperaPreguntasYRespuestas(vector <QA>& vec){
     ifstream archivo("./miarchivo.txt");
 
@@ -71,6 +78,7 @@ void RecuperaPreguntasYRespuestas(vector <QA>& vec){
     }
     archivo.close();
 }
+// Menu principal del programa
 int main()
 {
     int opcion;
@@ -80,14 +88,15 @@ int main()
     do {
         system("cls");
 
-        // Texto del menú que se verá cada vez
+        // Texto del menú que se verá cada vez que se inicie el programa
+        // Menu Bonito
         cout << "\n\n\t\t\tMenu de Opciones" << endl;
         cout << "\t\t\t----------------" << endl;
         cout << "\n\t1. Mostrar todas las definiciones almacenadas." << endl;
         cout << "\t2. Hacer una pregunta." << endl;
         cout << "\t0. SALIR" << endl;
 
-        cout << "\n\tIngrese una opcion: ";
+        cout << "\n\tIngrese una opcion: "; // Preguntan al usuario
         cin >> opcion;
 
         int numero1, numero2;
@@ -99,6 +108,7 @@ int main()
                 break;
 
             case 2:
+                printf("Seleccionaste: Hacer una pregunta.\n");
                 respuestaAPregunta(vec);
                 break;
 
