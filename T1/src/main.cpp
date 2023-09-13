@@ -9,7 +9,7 @@ using namespace std;
 void respuestaAPregunta(vector <QA> vec){
     system("cls");
     string PalOPreg;
-    cout << "Por favor, introduzca una pregunta o palabra clave..." ;
+    cout << "Por favor, introduzca una pregunta o palabra clave:" ;
     cin >> PalOPreg;
     bool bandera = false;
     for(QA qa : vec){

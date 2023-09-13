@@ -2,9 +2,9 @@
 2. Cual es la diferencia entre un interprete y un compilador?,La principal diferencia es que un compilador traduce todo el programa a código máquina antes de su ejecución, mientras que un intérprete ejecuta el código línea por línea en tiempo real.
 3. Que es el namespace y para qué se utiliza?,Un namespace en C++ es un espacio de nombres que se utiliza para evitar conflictos de nombres entre las variables, funciones y clases. Ayuda a organizar y estructurar el código al proporcionar un alcance separado para elementos relacionados.
 4. Cual es la diferencia entre declarar e inicializar una variable?,Declarar una variable significa definir su tipo y nombre, reservando memoria para ella. Inicializar una variable significa asignarle un valor específico en el momento de la declaración.
-5. Cual es la diferencia entre un break y un continue en los bucles de C++?,
-6. Que es el polimorfismo en clases?,
-7. Que hace la sentencia extern?,
+5. Cual es la diferencia entre un break y un continue en los bucles de C++?,`break` se utiliza para salir inmediatamente de un bucle y continuar con la ejecución del código fuera del bucle. `continue` se utiliza para saltar la iteración actual de un bucle y continuar con la siguiente iteración sin salir del bucle.
+6. Que es el polimorfismo en clases?,El polimorfismo en clases permite que objetos de diferentes clases puedan usar las mismas funciones de manera flexible.
+7. Que hace la sentencia extern?,La sentencia `extern` declara una variable o función que está definida en otro lugar.
 8. Que son las palabras reservadas?,
 9. Que es un puntero y como se utiliza? Explique con un ejemplo de la vida real?,
 10. Que es una funcion prototipo?,
