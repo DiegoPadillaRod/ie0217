@@ -1,12 +1,12 @@
 all: executable execute clean
 
-executable: main.o lista.o
+executable: main.o fun.o
 	g++ -o Preguntas main.o fun.o
 
 main.o:
 	g++ -c main.cpp
 
-lista.o:
+fun.o:
 	g++ -c fun.cpp
 
 execute:

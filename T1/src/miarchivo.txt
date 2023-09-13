@@ -23,10 +23,10 @@
 23. Que es una biblioteca dinamica?,Una biblioteca dinámica es un archivo de código compilado que se carga en tiempo de ejecución, permitiendo que múltiples programas compartan su código y recursos en memoria.
 24. Que es una biblioteca estatica?,Una biblioteca estática es un archivo de código compilado que se vincula con el programa en tiempo de compilación, lo que significa que el código de la biblioteca se incorpora directamente en el programa final, resultando en un ejecutable más grande.
 25. Que es un systemcall?,Una system call (llamada al sistema) es una interfaz que permite a un programa interactuar con el núcleo (kernel) del sistema operativo para realizar tareas como acceso a archivos, administración de procesos, comunicación, etc.
-26. Que es un callback?,
-27. SPI?,
-28. I2C?,
-29. Que es un programa deamon?,
-30. Que es un cross-compiler?,
-31. Que es un proceso?,
-32. Que es un thread?,
+26. Que es un callback?,Un callback es una función que se pasa como argumento a otra función y se ejecuta en respuesta a ciertos eventos o condiciones dentro del programa.
+27. ¿SPI?,SPI (Serial Peripheral Interface) es un protocolo de comunicación serial síncrona utilizado para transferir datos entre microcontroladores y periféricos, como sensores, pantallas y otros dispositivos electrónicos.
+28. ¿I2C?,I2C (Inter-Integrated Circuit) es un protocolo de comunicación serial multipunto utilizado para conectar microcontroladores y periféricos en una placa de circuito impreso, permitiendo la comunicación bidireccional de datos.
+29. Que es un programa deamon?,Un programa deamon (o demonio) es un proceso en segundo plano que se ejecuta de forma continua y sin intervención del usuario, generalmente utilizado para tareas de servicio o administración en sistemas operativos Unix y similares.
+30. Que es un cross-compiler?,Un cross-compiler genera código para plataformas diferentes de la del compilador.
+31. Que es un proceso?,Un proceso es un programa en ejecución en un sistema operativo, que tiene su propio espacio de memoria y recursos asignados, y puede realizar tareas específicas de manera independiente.
+32. Que es un thread?,Un thread (hilo) es una unidad de ejecución más pequeña dentro de un proceso, que permite que múltiples tareas se ejecuten de manera concurrente dentro de un programa.

@@ -19,7 +19,7 @@ bool QA::match(std::string matcheo){
 
 string QA::toString (){
     stringstream r;
-    r <<"La pregunta es: "<<pregunta<<endl;
+    r <<"La pregunta es:\n "<<pregunta<<endl;
     r << "R/ "<< respuesta << endl;
     return r.str ();
 }
