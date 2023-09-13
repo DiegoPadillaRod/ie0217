@@ -39,7 +39,7 @@ void preguntas(vector <QA> vec)
             for(QA Qa : vec){
                 cout<<Qa.pregunta<<endl;
             }
-            cout << "\t0. SALIR!!!!!!!" << endl;
+            cout << "\t0. SALIR" << endl;
             cout << "\n\tIngrese una opcion: ";
             cin >> seleccion;
             if (seleccion != 0){

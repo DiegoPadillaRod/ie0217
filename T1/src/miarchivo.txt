@@ -5,22 +5,22 @@
 5. Cual es la diferencia entre un break y un continue en los bucles de C++?,`break` se utiliza para salir inmediatamente de un bucle y continuar con la ejecución del código fuera del bucle. `continue` se utiliza para saltar la iteración actual de un bucle y continuar con la siguiente iteración sin salir del bucle.
 6. Que es el polimorfismo en clases?,El polimorfismo en clases permite que objetos de diferentes clases puedan usar las mismas funciones de manera flexible.
 7. Que hace la sentencia extern?,La sentencia `extern` declara una variable o función que está definida en otro lugar.
-8. Que son las palabras reservadas?,
-9. Que es un puntero y como se utiliza? Explique con un ejemplo de la vida real?,
-10. Que es una funcion prototipo?,
-11. Que es un puntero nullptr?,
-12. Cual es la diferencia entre pasar parámetros por valor, por referencia y por puntero?,
-13. Que es un memory leak?,
-14. Para que se utiliza la directiva #ifndef?,
-15. Que es el type casting?,
-16. Cual es la diferencia entre un arreglo y una lista en C++?,
-17. Que es el puntero this en C++?,
-18. Que es un objeto y qué es instanciar?,
-19. Que es el constructor y el destructor en una clase?,
-20. Que es la sobrecarga de operadores en C++ y como se utiliza?,
-21. Que es memoria dinamica?,
-22. Que es memoria estatica?,
-23. Que es una biblioteca dinamica?,
+8. Que son las palabras reservadas?,Las palabras reservadas son identificadores que tienen un significado especial en C++ y no pueden ser usados como nombres de variables, funciones o tipos personalizados.
+9. Que es un puntero y como se utiliza? Explique con un ejemplo de la vida real?,Un puntero es una variable que almacena la dirección de memoria de otra variable. Es como una etiqueta que apunta a una ubicación en la memoria. Por ejemplo, es como si tuvieras una nota con la dirección de una casa en lugar de la casa en sí. Puedes seguir la dirección en la nota para llegar a la casa real y hacer algo con ella.
+10. Que es una funcion prototipo?,Una función prototipo es una declaración anticipada de una función que define su tipo de retorno y parámetros sin proporcionar la implementación completa. Sirve para informar al compilador sobre la existencia de la función antes de utilizarla en el código.
+11. Que es un puntero nullptr?,`nullptr` es un valor especial que se utiliza en C++ para representar un puntero nulo, es decir, un puntero que no apunta a ninguna dirección de memoria válida.
+12. Cual es la diferencia entre pasar parámetros por valor, por referencia y por puntero?,Pasar por valor crea copias, pasar por referencia permite modificar directamente y pasar por puntero permite modificar y puede ser nulo.
+13. Que es un memory leak?,Un memory leak es cuando un programa no libera la memoria que debería, causando desperdicio de recursos.
+14. Para que se utiliza la directiva #ifndef?,La directiva `#ifndef` se utiliza para evitar la inclusión repetida de un archivo de encabezado en un programa C++ y prevenir conflictos de declaración.
+15. Que es el type casting?,El type casting es la conversión explícita de un tipo de dato a otro en C++, permitiendo operaciones entre tipos diferentes.
+16. Cual es la diferencia entre un arreglo y una lista en C++?,Un arreglo tiene un tamaño fijo y sus elementos son contiguos en memoria, mientras que una lista enlazada puede crecer dinámicamente y sus elementos pueden estar dispersos en memoria.
+17. Que es el puntero this en C++?,`this` es un puntero implícito en C++ que apunta al objeto actual en una función miembro de una clase, permitiendo acceder y modificar los miembros de la clase dentro de la función.
+18. Que es un objeto y qué es instanciar?,Un objeto es una instancia de una clase que representa un elemento del mundo real. Instanciar significa crear una copia específica de un objeto de una clase, asignando memoria y configurando sus atributos.
+19. Que es el constructor y el destructor en una clase?,El constructor es un método especial que inicializa un objeto cuando se crea, mientras que el destructor se llama automáticamente cuando el objeto se destruye y se utiliza para liberar recursos y realizar tareas de limpieza.
+20. Que es la sobrecarga de operadores en C++ y como se utiliza?,Sobrecargar operadores en C++ permite definir cómo los operadores trabajan con objetos personalizados, simplificando el uso de esos operadores con objetos de la clase.
+21. Que es memoria dinamica?,La memoria dinámica es un tipo de memoria que se asigna y libera durante la ejecución del programa, lo que permite la gestión flexible de la memoria para datos.
+22. Que es memoria estatica?,La memoria estática es una región de memoria reservada durante la compilación y su tamaño es fijo durante la ejecución, generalmente se utiliza para almacenar variables globales y estáticas.
+23. Que es una biblioteca dinamica?,Una biblioteca dinámica es un archivo de código compilado que se carga en tiempo de ejecución, permitiendo que múltiples programas compartan su código y recursos en memoria.
 24. Que es una biblioteca estatica?,
 25. Que es un systemcall?,
 26. Que es un callback?,
