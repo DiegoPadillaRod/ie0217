@@ -21,8 +21,8 @@
 21. Que es memoria dinamica?,La memoria dinámica es un tipo de memoria que se asigna y libera durante la ejecución del programa, lo que permite la gestión flexible de la memoria para datos.
 22. Que es memoria estatica?,La memoria estática es una región de memoria reservada durante la compilación y su tamaño es fijo durante la ejecución, generalmente se utiliza para almacenar variables globales y estáticas.
 23. Que es una biblioteca dinamica?,Una biblioteca dinámica es un archivo de código compilado que se carga en tiempo de ejecución, permitiendo que múltiples programas compartan su código y recursos en memoria.
-24. Que es una biblioteca estatica?,
-25. Que es un systemcall?,
+24. Que es una biblioteca estatica?,Una biblioteca estática es un archivo de código compilado que se vincula con el programa en tiempo de compilación, lo que significa que el código de la biblioteca se incorpora directamente en el programa final, resultando en un ejecutable más grande.
+25. Que es un systemcall?,Una system call (llamada al sistema) es una interfaz que permite a un programa interactuar con el núcleo (kernel) del sistema operativo para realizar tareas como acceso a archivos, administración de procesos, comunicación, etc.
 26. Que es un callback?,
 27. SPI?,
 28. I2C?,
