@@ -2,30 +2,9 @@
 #include <iostream>
 #include <iomanip>
 #include <sstream>
+#include <stdio.h>
+#include <fstream>
 using namespace std;
-int Coordenadas() {
-    int grados;
-    float minutos;
-    char direccion;
-
-    // Crear un objeto Ángulo usando el constructor
-    cout << "Ingrese los grados: ";
-    cin >> grados;
-
-    cout << "Ingrese los minutos: ";
-    cin >> minutos;
-
-    cout << "Ingrese la direccion (N, S, E, W): ";
-    cin >> direccion;
-
-    Angulo miAngulo(grados, minutos, direccion);
-
-    // Mostrar el ángulo
-    cout << "El angulo ingresado es: ";
-    miAngulo.mostrarAngulo();
-
-    return 0;
-}
 
 int main()
 {
@@ -45,15 +24,10 @@ int main()
 
         cout << "\n\tIngrese una opcion: "; // Preguntan al usuario
         cin >> opcion;
-
-        int numero1, numero2;
-        float resultado;
         switch (opcion) {
             case 1:
                 printf("Seleccionaste: Añadir un nuevo barco.\n");
-                int Coordenadas();
                 break;
-
             case 2:
                 printf("Seleccionaste: Eliminar un barco de la flota.\n");
                 break;
@@ -67,4 +41,26 @@ int main()
     } while (repetir);
 
     return 0;
+}
+
+void Coordenadas() {
+    int grados;
+    float minutos;
+    char direccion;
+
+    // Crear un objeto Ángulo usando el constructor
+    cout << "Ingrese los grados: ";
+    cin >> grados;
+
+    cout << "Ingrese los minutos: ";
+    cin >> minutos;
+
+    cout << "Ingrese la direccion (N, S, E, W): ";
+    cin >> direccion;
+
+    Angulo miAngulo(grados, minutos, direccion);
+
+    // Mostrar el ángulo
+    cout << "El angulo ingresado es: ";
+    miAngulo.mostrarAngulo();
 }

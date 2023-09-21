@@ -2,6 +2,8 @@
 #include <iostream>
 #include <iomanip>
 #include <sstream>
+#include <stdio.h>
+#include <fstream>
 
 using namespace std;
  // Constructor
