@@ -1,10 +1,10 @@
-#ifndef UNTITLED_BOATS_H
-#define UNTITLED_BOATS_H
+#ifndef ANGULO_H
+#define ANGULO_H
 
 #include <iostream>
 #include <iomanip>
 #include <stdio.h>
-#include <fstream>s
+#include <fstream>
 
 class Angulo {
 public:
@@ -20,4 +20,4 @@ public:
 
 };
 
-#endif //UNTITLED_FUN_H
+#endif //ANGULO_H

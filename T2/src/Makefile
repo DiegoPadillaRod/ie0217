@@ -1,13 +1,13 @@
-all: executable execute
+all: executable execute 
 
-executable: main.o boats.o
-	g++ -o Buques main.o boats.o
+executable: main.o angulo.o
+	g++ -o Buques.exe .\angulo.o .\main.o
 
 main.o:
 	g++ -c main.cpp
 
-boats.o:
-	g++ -c boats.cpp
+angulo.o:
+	g++ -c angulo.cpp
 
 execute:
-	./Buques
+	.\Buques.exe
