@@ -1,10 +1,12 @@
-#ifndef ANGULO_H
-#define ANGULO_H
+#ifndef ANGULO_HPP
+#define ANGULO_HPP
 
 #include <iostream>
 #include <iomanip>
+#include <sstream>
 #include <stdio.h>
-#include <fstream>
+
+using namespace std;
 
 class Angulo {
 public:
@@ -14,10 +16,9 @@ public:
 
     Angulo (int = 0, float = 0.0, char = 'F');
 
-    void mostrarAngulo();
+    string mostrarAngulo();
 
-    
-
+    void ingresarDatos();
 };
 
-#endif //ANGULO_H
+#endif //ANGULO_HPP

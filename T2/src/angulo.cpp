@@ -1,18 +1,22 @@
-#include "angulo.hpp"
-#include <iostream>
-#include <iomanip>
-#include <sstream>
-#include <stdio.h>
-#include <fstream>
+#include "Angulo.hpp"
 
-using namespace std;
- // Constructor
 Angulo::Angulo(int grados, float minutos, char direccion) {
-        this->grados = grados;
-        this->minutos = minutos;
-        this->direccion = direccion;
+    this->grados = grados;
+    this->minutos = minutos;
+    this->direccion = direccion;
 }
 
-void Angulo::mostrarAngulo() {
-        cout << grados << "\xF8" << minutos << "' " << direccion << endl;
+string Angulo::mostrarAngulo() {
+    stringstream s;
+    s << grados << "\xF8" << minutos << "' " << direccion << endl;
+    return s.str();
+}
+
+void Angulo::ingresarDatos(){
+    cout<< "Ingrese los Grados: ";
+    cin>>this->grados;
+    cout<< "Ingrese los Minutos: ";
+    cin>>this->minutos;
+    cout<< "Ingrese la Direccion: ";
+    cin>>this->direccion;
 }

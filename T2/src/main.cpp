@@ -1,4 +1,4 @@
-#include "angulo.hpp"
+#include "Flota.hpp"
 #include <iostream>
 #include <iomanip>
 #include <sstream>
@@ -6,34 +6,9 @@
 #include <fstream>
 using namespace std;
 
-int Coordenadas() 
-{
-    int grados;
-    float minutos;
-    char direccion;
-
-    // Crear un objeto Ángulo usando el constructor}
-    cout << "Ingrese las coordenadas del barco.\n"<< endl;
-    cout << "Ingrese los grados: \n"<< endl;
-    cin >> grados;
-
-    cout << "Ingrese los minutos: "<< endl;
-    cin >> minutos;
-
-    cout << "Ingrese la direccion (N, S, E, W): "<< endl;
-    cin >> direccion;
-   
-    
-    Angulo angulonuevo(grados, minutos, direccion);
-
-    // Mostrar el ángulo
-    cout << "El angulo ingresado es: "<< endl; 
-    angulonuevo.mostrarAngulo();
-    return 0;
-}
-
 int main()
 {
+    Flota barco; 
     int opcion;
     bool repetir = true;
     do {
@@ -51,14 +26,26 @@ int main()
         switch (opcion) {
             case 1:
                 printf("Seleccionaste: Anadir un nuevo barco.\n");
-                Coordenadas();
+                barco.IngresarBarco();
                 system("pause");
                 break;
             case 2:
+                int NumSerie;
                 printf("Seleccionaste: Eliminar un barco de la flota.\n");
+                cin >> NumSerie;
+                if (barco.BorrarBarco(NumSerie)) {
+                    cout << "Se ha borrado Corectamente" << endl;
+                    
+                }
+                 else {
+                    cout << "Se ha borrado Corectamente" << endl;
+                 }
+                system("pause");
                 break;
             case 3:
                 printf("Seleccionaste: Mostrar la flota ordenada por latitud\n");
+                barco.OrdenarFlota();
+                system("pause");
                 break;
             case 0:
                 repetir = false;
