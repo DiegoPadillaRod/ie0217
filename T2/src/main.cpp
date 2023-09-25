@@ -1,3 +1,8 @@
+/*
+ * @file main.cpp
+ * @authors Diego Padilla.
+ * @date 24/9/2023
+ */
 #include "Flota.hpp"
 #include <iostream>
 #include <iomanip>
@@ -6,6 +11,7 @@
 #include <fstream>
 using namespace std;
 
+// Creando el menu que dejara al usuario usar el programa.
 int main()
 {
     Flota barco; 

@@ -1,9 +1,15 @@
+/*
+ * @file Flota.hpp
+ * @authors Diego Padilla.
+ * @date 24/9/2023
+ */
 #ifndef FLOTA_HPP
 #define FLOTA_HPP
 #include "Barco.hpp"
 #include "NumeroDeSerie.hpp"
 #include <vector>
 
+// Clase Flota contrenda los metodos necesarios para el punto 3.
 class Flota {
 private:
     vector<Barco*>* Barcos;

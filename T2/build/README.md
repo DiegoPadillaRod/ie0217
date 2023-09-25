@@ -7,7 +7,6 @@
 <sub>El comando chcp 65001, sirve para que los caracteres se imprimar correctamente, ejecutarlo en powershell antes de la compilacion </sub>
 ```
 cd .\T2\src\
-chcp 65001
 make all
 ```
 

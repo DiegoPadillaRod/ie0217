@@ -1,3 +1,9 @@
+/*
+ * @file Angulo.hpp
+ * @authors Diego Padilla.
+ * @date 24/9/2023
+ */
+
 #ifndef ANGULO_HPP
 #define ANGULO_HPP
 
@@ -7,7 +13,7 @@
 #include <stdio.h>
 
 using namespace std;
-
+// Clase angulo contrenda los metodos necesarios para el punto 1.
 class Angulo {
 public:
     int grados;

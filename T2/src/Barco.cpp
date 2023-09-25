@@ -1,6 +1,12 @@
+/*
+ * @file Barco.cpp
+ * @authors Diego Padilla.
+ * @date 24/9/2023
+ */
 #include "Barco.hpp"
 
 using namespace std;
+
 Barco::Barco( Angulo * lat, Angulo * lon) {
     numeroDeSerie = new NumeroDeSerie();
     latitud = lat;
