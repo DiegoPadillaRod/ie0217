@@ -3,6 +3,7 @@
 int NumeroDeSerie::conteo  = 0;
 
 NumeroDeSerie::NumeroDeSerie() {
+    conteo++;
     numSerie = conteo++;
 }
 

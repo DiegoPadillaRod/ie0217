@@ -8,8 +8,11 @@ Barco::Barco( Angulo * lat, Angulo * lon) {
 }
 
 void Barco::ingresarCoordenadas() {
+    cout << "--- Añadir un nuevo barco ---" << endl;
+    cout << "Ingrese la latitud (N/S) del barco:" << endl;
     latitud->ingresarDatos();
     cout << endl;
+    cout << "Ingrese la longitud (E/W) del barco:" << endl;
     longitud->ingresarDatos();
 }
 

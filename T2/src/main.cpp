@@ -19,7 +19,7 @@ int main()
         cout << "\n\t1. Anadir un nuevo barco a la flota" << endl;
         cout << "\t2. Eliminar un barco de la flota" << endl;
         cout << "\t3. Mostrar la flota ordenada por latitud" << endl;
-        cout << "\t0. SALIR" << endl;
+        cout << "\t0. SALIR!!" << endl;
 
         cout << "\n\tIngrese una opcion: "; // Preguntan al usuario
         cin >> opcion;
@@ -32,13 +32,14 @@ int main()
             case 2:
                 int NumSerie;
                 printf("Seleccionaste: Eliminar un barco de la flota.\n");
+                cout << "Digite el Numero de Serie del Barco que Quiere Eliminar:" << endl;
                 cin >> NumSerie;
                 if (barco.BorrarBarco(NumSerie)) {
                     cout << "Se ha borrado Corectamente" << endl;
                     
                 }
                  else {
-                    cout << "Se ha borrado Corectamente" << endl;
+                    cout << "Se ha el barco borrado Corectamente!!!!" << endl;
                  }
                 system("pause");
                 break;
