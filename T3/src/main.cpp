@@ -37,13 +37,13 @@ void abrirArchivo( const std::string &miarchivo) {
 
 const std::regex expresion_regular1(".*@.*\\.com.*"); // Todas la secciones de texto que contengan un @ y un .com
 
-void Correos(const std::string &miarchivo) {
+void Correos(std::string &miarchivo) {
     std::ifstream archivo(miarchivo);
     std::string linea;
     bool correos_enc = false; // Un booleando para que logre identificar cuando dio con la expresion regular 
 
     if (!archivo) {
-        std::cerr << "Algo salió MAL!!!!" << std::endl; // Archivo no abrio
+        std::cerr << "Algo salio MAL!!!!" << std::endl; // Archivo no abrio
         return;
     }
 
@@ -61,6 +61,32 @@ void Correos(const std::string &miarchivo) {
     }
 }
 
+const std::regex expresion_regular2("http[s]?://\\S+"); // Todas la secciones de texto que contengan un http o un https acompañadas de ://.
+
+void URLs(std::string &miarchivo) {
+    std::ifstream archivo(miarchivo);
+    std::string linea;
+    bool urls = false;
+
+    if (!archivo) {
+        std::cerr << "Algo salio MAL!!!!" << std::endl; // Archivo no abrio
+        return;
+    }
+
+    while (std::getline(archivo, linea)) {
+        std::smatch match;
+        if (std::regex_search(linea, expresion_regular2)) {
+            urls = true; // Confirma la expresion regular
+            std::cout << linea << std::endl; // Imprime las coincidencias
+        }
+    }
+
+    archivo.close();
+
+    if (!urls) {
+        std::cout << "No hay URLs que cumplan con la expresión regular." << std::endl;
+    }
+}
 
 
 int main() { 
@@ -74,5 +100,7 @@ int main() {
     std::cout << "Se encontraron los siguientes correos que terminan con '.com'." << std::endl;
     Correos(miarchivo);
     std::cout << "\n" << std::endl;
+    std::cout << "Se encontraron los siguientes URLs que comienzan con 'http o https'." << std::endl;
+    URLs(miarchivo);
     return 0;
 }

@@ -4,6 +4,7 @@ TARGET = Palabras.exe
 
 # Objetivo predeterminado
 all: $(TARGET) execute clean
+# Creando archivos
 
 # Compilador de C++
 CXX = g++
