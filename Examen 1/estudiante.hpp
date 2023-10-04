@@ -12,14 +12,14 @@
  * @brief Clase que que se encargará de contener los atributos y los metodos especificados.
  */
 class Estudiante {
-private:
-    std::string nombre;
-    float* calificacion;
+private: //Atributos Privados
+    std::string nombre; // string ya qque es una cadena de caracteres
+    float* calificacion; // float permite ingresar decimales
 
 public:
-    Estudiante( std::string nombre, float calificacion);
-    void MostrarInformacion();
-    ~Estudiante();
+    Estudiante( std::string nombre, float calificacion); // Prototipo del constructor
+    void MostrarInformacion(); // Prototipo del metodo para desplegar la info
+    ~Estudiante(); // Prototipo del Destructor
 };
 
 #endif
