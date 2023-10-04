@@ -5,8 +5,9 @@ TARGET = Notas.exe
 # Objetivo predeterminado
 all: $(TARGET) execute clean
 
-commit: gitadd gitcommit git push
 # Comandos para generar el commit 
+commit: gitadd gitcommit gitpush
+
 gitadd:
 	git add .
 
@@ -41,4 +42,5 @@ execute:
 .PHONY: clean
 clean:
 	del $(TARGET) $(OBJECTS)
+
 
