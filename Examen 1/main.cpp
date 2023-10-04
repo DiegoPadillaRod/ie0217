@@ -18,7 +18,7 @@ int main() { // Creando el main que permitira al usuario interactuar con el prog
    
     if (calificacion >= 0 && calificacion <= 100) { // Regla que nos permite filtrar los valores que no estan entre 0 y 100
         Estudiante estudiante(nombre, calificacion);
-        estudiante.MostrarInformacion();
+        estudiante.Notas();
     } else {
         std::cout << "La nota NO esta entre 0 y 100." << std::endl;
     }

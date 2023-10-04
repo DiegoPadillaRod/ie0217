@@ -18,7 +18,7 @@ private: //Atributos Privados
 
 public:
     Estudiante( std::string nombre, float calificacion); // Prototipo del constructor
-    void MostrarInformacion(); // Prototipo del metodo para desplegar la info
+    void Notas(); // Prototipo del metodo para desplegar la info
     ~Estudiante(); // Prototipo del Destructor
 };
 

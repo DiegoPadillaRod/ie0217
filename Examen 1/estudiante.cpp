@@ -14,7 +14,7 @@ Estudiante::Estudiante(std::string nombre, float calificacion) { // Constructor 
     *this->calificacion = calificacion; // Le asigna el valor dado por el usuario a calificacion.
 }
 
-void Estudiante::MostrarInformacion() { // Este metodo despliega en pantalla la info brindada por el usuario
+void Estudiante::Notas() { // Este metodo despliega en pantalla la info brindada por el usuario
     std::cout << "Estudiante: " << nombre << std::endl;
     std::cout << "Calificacion: " << *calificacion << std::endl;
 }
