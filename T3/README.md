@@ -1,24 +1,13 @@
 # Tarea 3
 
-**Probar Makefile primero**
 
 ***Comandos para Makefile:***
 
-<sub>El comando chcp 65001, sirve para que los caracteres se imprimar correctamente, ejecutarlo en powershell antes de la compilacion </sub>
+**Por motivos que desconozco el archivo solucion.txt para p4 no se genera correctemente en el make file pero en la terminar si, por lo que añado el archivo prueba.txt para que se corrobore el funcionamiento del programa**
+
+<sub>Ejecutar el programa y verificar su funcionamiento con el archivo prueba.txt, para p1, p2 y p3 probarlo de la manera comun</sub>
 ```
-cd .\T3\src\
-chcp 65001
+cd .\T3
 make all
-```
-
-
-
-Comandos a realizar para compilar la tarea 1 sin make:
-
-<sub>El comando chcp 65001, sirve para que los caracteres se imprimar correctamente, ejecutarlo en powershell antes de la compilacion </sub>
-```
-cd T3
-chcp 65001
-g++ ./src/*.cpp -o ./build/main
-./build/main
+ingresarle al programa prueba.txt
 ```

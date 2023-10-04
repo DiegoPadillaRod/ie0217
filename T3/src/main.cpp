@@ -1,56 +1,69 @@
 #include <iostream>
 #include <fstream>
-#include <cctype>
 #include <string>
-#include <algorithm>
-#include <regex> 
-using namespace std;
-//Determina con ayuda de la instruccion ispunt que es un signo de puntuacion y que no lo es.
-bool Signos(char signos) {
-    return std::ispunct(signos);
+#include <regex>
+#include <cctype> // Gracias a esta libreria podemos usar ispunct que detecta los signos de puntuacion
+#include <algorithm> // Gracias a esta libreria podemos usar transform que nos ayudara a cmabiar nuestro texto a mins
+#include <map>
+
+typedef std::map<std::string, int> Palabras;
+
+bool Signos(char c) {
+    return std::ispunct(c);
 }
 
-void abrirArchivo( const std::string &miarchivo) {
+void procesarArchivo(std::string &miarchivo, Palabras &words) { //Funcion que lee el archivo y que se encarga de procesarlo.
     std::ifstream archivo(miarchivo);
 
-    if (!archivo) {
-        std::cerr << " El archivo " << miarchivo << " no existe. ERROR!!!!" << std::endl;
-        return;
+    if (!archivo) { // el archivo no existe
+        std::cerr << "El archivo " << miarchivo << " no existe. ERROR!!!!" << std::endl;
+        exit(1);
     }
 
-    if (archivo.peek() == std::ifstream::traits_type::eof()) {
+    if (archivo.peek() == std::ifstream::traits_type::eof()) { // el archivo esta vacio
         std::cerr << "El archivo " << miarchivo << " está vacío. ERROR!!!!" << std::endl;
-        return;
+        exit(1);
     }
 
     std::string linea;
     while (std::getline(archivo, linea)) {
-        // minúsculas
+        // Convertir a minúsculas
         std::transform(linea.begin(), linea.end(), linea.begin(), ::tolower);
-        // signos de puntuacion.
-        linea.erase(std::remove_if(linea.begin(), linea.end(), Signos), linea.end());
-        cout << linea << endl;
+        
+        // Eliminar signos de puntuación y procesar las palabras
+        std::string palabra = "";
+        for (char caracter : linea) {
+            if (!Signos(caracter) && !std::isspace(caracter)) { // isspace verifica si hay un espacio en blanco o no
+                palabra += caracter;
+            } else if (!palabra.empty()) {
+                ++words[palabra];
+                palabra.clear();
+            }
+        }
+        
+        if (!palabra.empty()) { // verifica que la ultima palabra fue procesada.
+            ++words[palabra];
+        }
     }
 
     archivo.close();
 }
 
-const std::regex expresion_regular1(".*@.*\\.com.*"); // Todas la secciones de texto que contengan un @ y un .com
-
-void Correos(std::string &miarchivo) {
+const std::regex expresion_regular1(".*@.*\\.com.*");
+void Correos(std::string miarchivo) {
     std::ifstream archivo(miarchivo);
     std::string linea;
-    bool correos_enc = false; // Un booleando para que logre identificar cuando dio con la expresion regular 
+    bool correos_enc = false;
 
     if (!archivo) {
-        std::cerr << "Algo salio MAL!!!!" << std::endl; // Archivo no abrio
+        std::cout << "Algo salió MAL!!!!" << std::endl;
         return;
     }
 
     while (std::getline(archivo, linea)) {
         if (std::regex_search(linea, expresion_regular1)) {
-            correos_enc = true; // Confirma la expresion regular
-            std::cout << linea << std::endl; // Imprime las coincidencias
+            correos_enc = true;
+            std::cout << linea << std::endl;
         }
     }
 
@@ -61,23 +74,23 @@ void Correos(std::string &miarchivo) {
     }
 }
 
-const std::regex expresion_regular2("http[s]?://\\S+"); // Todas la secciones de texto que contengan un http o un https acompañadas de ://.
+const std::regex expresion_regular2("http[s]?://\\S+");
 
-void URLs(std::string &miarchivo) {
+void URLs(std::string miarchivo) {
     std::ifstream archivo(miarchivo);
     std::string linea;
     bool urls = false;
 
     if (!archivo) {
-        std::cerr << "Algo salio MAL!!!!" << std::endl; // Archivo no abrio
+        std::cout << "Algo salió MAL!!!!" << std::endl;
         return;
     }
 
     while (std::getline(archivo, linea)) {
         std::smatch match;
-        if (std::regex_search(linea, expresion_regular2)) {
-            urls = true; // Confirma la expresion regular
-            std::cout << linea << std::endl; // Imprime las coincidencias
+        if (std::regex_search(linea, match, expresion_regular2)) {
+            urls = true;
+            std::cout << match.str() << std::endl;
         }
     }
 
@@ -88,19 +101,29 @@ void URLs(std::string &miarchivo) {
     }
 }
 
-
-int main() { 
+int main() {
     std::string miarchivo;
-    std::cout << "Ingrese el nombre del archivo .txt: ";
+
+    std::cout << "Por favor, ingrese el nombre del archivo .txt que desea analizar: ";
     std::cin >> miarchivo;
 
-    std::cout << "El texto procesado es el siguiente" << std::endl;
-    abrirArchivo(miarchivo);
+    Palabras frecuencia;
+    procesarArchivo(miarchivo, frecuencia);
+
+    std::cout << "\tPalabra\t\t" "|" "\tFrecuencia\t" << std::endl;
+    std::cout << "\t----------------|-----------------" << std::endl;
+    for (auto &pair : frecuencia) {
+        if (pair.first.length() <= 7)
+            std::cout << "\t" << pair.first << "\t\t|" << pair.second << std::endl;
+        else 
+            std::cout << "\t" << pair.first << "\t|" << pair.second << std::endl;
+    }
     std::cout << "\n" << std::endl;
     std::cout << "Se encontraron los siguientes correos que terminan con '.com'." << std::endl;
     Correos(miarchivo);
     std::cout << "\n" << std::endl;
-    std::cout << "Se encontraron los siguientes URLs que comienzan con 'http o https'." << std::endl;
+    std::cout << "Se encontraron los siguientes URLs que comienzan con 'http'." << std::endl;
     URLs(miarchivo);
+
     return 0;
 }

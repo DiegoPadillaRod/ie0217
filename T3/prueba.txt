@@ -1,0 +1,19 @@
+diego@gmail.com
+diego1@gmail.com
+diego2@gmail.com
+diego3@mail.com
+diego4@gmail.com
+diego@ucr.ac.cr
+usuario1@example.com
+contact@micorreo.net
+http://www.ejemplo1.com
+https://www.prueba123.net
+http://www.miwebficticia.org
+https://www.misitiofake.info
+http://www.sitioejemplo123.edu
+info@correo123.org
+support@correo-falso.info
+john.doe@email-empresa.edu
+Las expresiones regulares (tambien conocidas como regex o regexp) son patrones utilizados para buscar y manipular cadenas de texto 
+de una manera mas flexible y poderosa. Permiten realizar busquedas de patrones dentro de texto, validar cadenas, realizar sustituciones 
+y mucho mas.
