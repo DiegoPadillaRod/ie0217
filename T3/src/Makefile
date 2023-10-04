@@ -3,7 +3,7 @@
 TARGET = Palabras.exe
 
 # Objetivo predeterminado
-all: $(TARGET) execute
+all: $(TARGET) execute clean
 
 # Compilador de C++
 CXX = g++
@@ -29,4 +29,4 @@ execute:
 # Regla para limpiar los archivos generados
 .PHONY: clean
 clean:
-	del $(TARGET) $(OBJECTS)
+	del $(TARGET) $(OBJECTS) *.exe

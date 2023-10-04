@@ -35,6 +35,31 @@ void abrirArchivo( const std::string &miarchivo) {
     archivo.close();
 }
 
+const std::regex expresion_regular1(".*@.*\\.com.*"); // Todas la secciones de texto que contengan un @ y un .com
+
+void Correos(const std::string &miarchivo) {
+    std::ifstream archivo(miarchivo);
+    std::string linea;
+    bool correos_enc = false; // Un booleando para que logre identificar cuando dio con la expresion regular 
+
+    if (!archivo) {
+        std::cerr << "Algo salió MAL!!!!" << std::endl; // Archivo no abrio
+        return;
+    }
+
+    while (std::getline(archivo, linea)) {
+        if (std::regex_search(linea, expresion_regular1)) {
+            correos_enc = true; // Confirma la expresion regular
+            std::cout << linea << std::endl; // Imprime las coincidencias
+        }
+    }
+
+    archivo.close();
+
+    if (!correos_enc) {
+        std::cout << "No hay correos que cumplan con la expresión regular." << std::endl;
+    }
+}
 
 
 
@@ -42,6 +67,12 @@ int main() {
     std::string miarchivo;
     std::cout << "Ingrese el nombre del archivo .txt: ";
     std::cin >> miarchivo;
+
+    std::cout << "El texto procesado es el siguiente" << std::endl;
     abrirArchivo(miarchivo);
+    std::cout << "\n" << std::endl;
+    std::cout << "Se encontraron los siguientes correos que terminan con '.com'." << std::endl;
+    Correos(miarchivo);
+    std::cout << "\n" << std::endl;
     return 0;
 }
