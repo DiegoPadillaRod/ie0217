@@ -10,4 +10,4 @@ cd .\Examen 1
 chcp 65001
 make all
 ```
-<span>![</span><span>Diagrama de Flujo</span><span>]</span><span>(</span><span>https://raw.githubusercontent.com/DiegoPadillaRod/ie0217/master/assets/Diagrama.png</span><span>)</span>
+<span>![</span><span>Diagrama de Flujo</span><span>]</span><span>(</span><span>https://github.com/DiegoPadillaRod/ie0217/blob/main/Examen%201/Diagrama.png</span><span>)</span>
