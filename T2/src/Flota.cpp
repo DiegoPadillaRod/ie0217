@@ -22,8 +22,8 @@ void Flota::IngresarBarco() {
 }
 
 bool Flota::BorrarBarco(int numSerie) {
-    for(int i = 0; i<Barcos->size();i++){
-        if(Barcos->at(i)->getNumeroDeSerie()->getNumSerie() == numSerie) {
+    for (size_t i = 0; i < Barcos->size(); i++) {
+        if (Barcos->at(i)->getNumeroDeSerie()->getNumSerie() == numSerie) {
             Barcos->erase(Barcos->begin() + i);
             return true;
         }

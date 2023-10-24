@@ -1,22 +1,33 @@
-all: executable execute 
+# Makefile para compilar un programa C+* con múltiples archivos y clases
+# Nombre del programa de salida
+TARGET = Buques.exe
 
-executable: main.o Angulo.o NumeroDeSerie.o Barco.o Flota.o 
-	g++ -o Buques.exe .\Angulo.o .\NumeroDeSerie.o .\Barco.o .\Flota.o .\main.o
+# Objetivo predeterminado
+all: $(TARGET) execute
 
-main.o:
-	g++ -c main.cpp
+# Compilador de C++
+CXX = g++
 
-Angulo.o:
-	g++ -c Angulo.cpp
+# Opciones de compilación
+CXXFLAGS = -Wall -std=c++11
 
-NumeroDeSerie.o:
-	g++ -c NumeroDeSerie.cpp
+# Lista de archivos fuente
+SOURCES = main.cpp Angulo.cpp NumeroDeSerie.cpp Barco.cpp Flota.cpp
 
-Barco.o:
-	g++ -c Barco.cpp
+# Lista de archivos objeto generados a partir de los archivos fuente
+OBJECTS= $(SOURCES:.cpp=.exe)
 
-Flota.o:
-	g++ -c Flota.cpp
+# Regla para compilar los archivos fuente en archivos objeto
+%.exe: %.cpp
+	$(CXX) $(CXXFLAGS) -c $< -o $@
 
+# Regla para compilar el programa a partir de los archivos objeto
+$(TARGET) : $(OBJECTS)
+	$(CXX) $(CXXFLAGS) -o $(TARGET) $(OBJECTS)
 execute:
-	.\Buques.exe
+	./$(TARGET)
+# Regla para limpiar los archivos generados
+.PHONY: clean
+clean:
+	del $(TARGET) $(OBJECTS)
+
