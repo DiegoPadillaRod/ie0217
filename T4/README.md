@@ -4,7 +4,7 @@
 ***Comandos para tarea 4***
 
 
-***Es impotar estar ubicados es el branch feature/feature-T4***
+***Es importante estar ubicados en el branch feature/feature-T4 para visualizar el directorio de la Tarea***
 
 
 **Para motivos de la ejecuación del código añadido en el directorio T4 de este repositorio seguir los siguientes pasos**
