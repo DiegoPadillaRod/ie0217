@@ -99,5 +99,5 @@ if __name__ == "__main__":
         print(f"Menú temático registrado con éxito: "
               f"{menu_fin.soy_menu_tematico()}")
 
-    print("Gracias por usar el sistema de gestión de bares."
-          " Hasta pronto querido usuario <3 tqm!")
+    print("Gracias por usar el sistema de gestión de bares.")
+    print(" Hasta pronto querido usuario <3 tqm!")
