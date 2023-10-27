@@ -42,7 +42,7 @@ class Restaurante:
 Clase MenusTematicos.
 Esta clase nos permite crear objetos de tipo menu
 con un nombre.
-Atributos Heredados de clase Restaurante:
+Atributos  y Atributos Heredados de clase Restaurante:
     nombre : El nombre del restaurante.
     tipo_cocina : El tipo de cocina del restaurante.
     menu : El nombre que recibira el menu tematico
@@ -50,6 +50,7 @@ Atributos Heredados de clase Restaurante:
 
 
 class MenusTematicos(Restaurante):
+
     # Constructor creando instancias
     def __init__(self, nombre, cocina, menu):
 
@@ -66,6 +67,33 @@ class MenusTematicos(Restaurante):
     def soy_menu_tematico(self):
         # Accediendo a la informacion que brindo el usuario.
         return self.__menu_tematico
+
+
+"""
+Clase HeladoCacique.
+Esta clase nos permite crear objetos de tipo helado
+cacique con un sabor o varios sabores.
+Atributos de clase HeladoCacique:
+    nombre : El nombre del restaurante.
+    tipo_cocina : El tipo de cocina del restaurante.
+    menu : El nombre que recibira el menu tematico
+"""
+
+
+class HeladoCacique:
+
+    # Constructor crenado instancia
+    def __init__(self):
+        # Creando lista vacia
+        self.__sabores = []
+
+    # Agrgando sabores a la lista
+    def agregar_sabor(self, sabor):
+        self.__sabores.append(sabor)
+
+    # Accede a la lista e imprime los sabores registrados
+    def mostrar_sabores(self):
+        return ", ".join(self.__sabores)
 
 
 if __name__ == "__main__":
@@ -99,5 +127,24 @@ if __name__ == "__main__":
         print(f"Menú temático registrado con éxito: "
               f"{menu_fin.soy_menu_tematico()}")
 
+        # Creabdo Objeto helado cacique
+        helado_cacique = HeladoCacique()
+
+        # Esperando respuesta del usuario
+        respuesta = input("¿Desea agregar un sabor de helado Cacique? (s/n): ")
+
+        while respuesta == "s":
+
+            # Esperando respuesta del usuario
+            sabor = input("Ingrese el sabor para crear su exquisitez: ")
+
+            # Agregando informacion a la lista
+            helado_cacique.agregar_sabor(sabor)
+
+            # Mostrando los sabores registrados
+            print("Sabor agregado con éxito.")
+            print(f"Sabores disponibles: {helado_cacique.mostrar_sabores()}")
+
+    # Despida y final del programa
     print("Gracias por usar el sistema de gestión de bares.")
     print(" Hasta pronto querido usuario <3 tqm!")
