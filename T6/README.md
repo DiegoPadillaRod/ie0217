@@ -6,6 +6,7 @@
 
 ***Es importante estar ubicados en el branch feature/feature-T6 para visualizar el directorio de la Tarea***
 
+***Son 5 graficos se despliega uno a la vez cerrar ventana para ver el siguiente***
 
 **Para motivos de la ejecuación del código añadido en el directorio T6 de este repositorio seguir los siguientes pasos**
 
@@ -41,42 +42,37 @@ En esta tarea se utilizaron diferentes conceptos y detalles relacionados al clus
 
 - A continuación, se proporcionarán imágenes de la gráficas para complementar el informe, mi idea fue demostrar mis capacidades para la obtención y diseño de gráficas entendibles, además de la utilización de conceptos como kmeans, clusters, número óptimo de clusters, regresión lineal, ajuste, visualización, etc. Al ser un tema del cual no conozco mucho las relaciones quizás no son las más acertadas, pero eso ya son más cuestiones para aprender en el sector de data analysis.
 
-* Menú
+
+
+* Graficas con los datos elegidos.
+* DEP_TIME: cuanto dura moviendose la aeronave 
+* DEP_DELAY: retraso en la salida del vuelo 
+* DELAY_DUE_CARRIER: retrasos por mantenimientos o por carga de equipaje
+* DELAY_DUE_WEATHER: retraso por mal tiempo
+* DELAY_DUE_NAS: retraso por indicaciones de la torre de control
+* DELAY_DUE_SECURITY: retraso por seguridad 
+* DELAY_DUE_LATE_AIRCRAFT: atraso por aeronave retrasada
+
 <p align="center">
     <img src="https://github.com/DiegoPadillaRod/ie0217-proyecto/blob/main/Propuesta/Imagenes/1.jpg" />
 </p>
 
-* Eligiendo tema de interés
+* Aplicando metodo del codo obtemos un resultadi bastante satisfactorio, determinamos un k=4, ya que asi se agrupan y se distinguen mejor los datos
 <p align="center">
     <img src="https://github.com/DiegoPadillaRod/ie0217-proyecto/blob/main/Propuesta/Imagenes/2.jpg" />
 </p>
 
-* Presentando información
+* Vemos nuestros clusters bien definidos, uno mas disperso pero es necesario ya que un numero menor de clusters no permite ubicar bien los datos.
 <p align="center">
     <img src="https://github.com/DiegoPadillaRod/ie0217-proyecto/blob/main/Propuesta/Imagenes/3.jpg" />
 </p>
 
-* Profundizando
+* Regresion lineal
 <p align="center">
     <img src="https://github.com/DiegoPadillaRod/ie0217-proyecto/blob/main/Propuesta/Imagenes/4.jpg" />
 </p>
 
-* Opción de Cuestionario
+* Modelo de prediccion
 <p align="center">
     <img src="https://github.com/DiegoPadillaRod/ie0217-proyecto/blob/main/Propuesta/Imagenes/5.1.jpg" />
-</p>
-
-* Opción de Cuestionario
-<p align="center">
-    <img src="https://github.com/DiegoPadillaRod/ie0217-proyecto/blob/main/Propuesta/Imagenes/5.2.jpg" />
-</p>
-
-* Actvidad de ocio
-<p align="center">
-    <img src="https://github.com/DiegoPadillaRod/ie0217-proyecto/blob/main/Propuesta/Imagenes/6.jpg" />
-</p>
-
-* Vista General de las ideas iniciales (Se observa como el proyecto tiene variedad de opciones)
-<p align="center">
-    <img src="https://github.com/DiegoPadillaRod/ie0217-proyecto/blob/main/Propuesta/Imagenes/Vista%20general%20.png" />
 </p>

@@ -89,29 +89,31 @@ retrasos = data[data[variable_respuesta] > 0]
 
 # Seleccionar variables para la regresión
 X = retrasos[['DEP_TIME', 'DEP_DELAY']]
-y = retrasos[variable_respuesta]
+y = retrasos['DELAY_DUE_CARRIER']
 
 # Crear y ajustar el modelo de regresión lineal multiple
 model = LinearRegression()
 model.fit(X, y)
 
 # Graficar la línea de regresión
-plt.scatter(X, y, color='blue', label='Actual')
-plt.plot(X, model.predict(X), color='red', linewidth=2)
-plt.title('Regresión Lineal')
-plt.xlabel('DEP_DELAY')
-plt.ylabel(variable_respuesta)
+plt.scatter(X['DEP_DELAY'], y, color='blue')
+plt.plot(X['DEP_DELAY'], model.predict(X), color='red', linewidth=2)
+plt.title('Regresion Lineal')
+plt.xlabel('DEP_DELAY(Retraso en la salida final)')
+plt.ylabel('DELAY_DUE_CARRIER(Retraso por carga de equipaje)')
 plt.legend()
 plt.show()
 
 # Calcular el coeficiente de determinación (R²)
-r2 = model.score(X, y)
+r2 = model.score(X, y) # metodo de scikit
+print("coeficiente de determinación (R²)", r2)
 
 # Hacer predicciones utilizando el modelo de regresión y graficar
 y_pred = model.predict(X)
-plt.scatter(X['DEP_DELAY'], y, color='blue', label='Actual')
-plt.scatter(X['DEP_DELAY'], y_pred, color='red', label='Predicción')
-plt.xlabel('DEP_DELAY')
-plt.ylabel(target_variable)
+plt.scatter(X['DEP_DELAY'], y, color='blue')
+plt.scatter(X['DEP_DELAY'], y_pred, color='red')
+plt.title('Predicción')
+plt.xlabel('DEP_DELAY(Retraso en la salida final)')
+plt.ylabel('DELAY_DUE_CARRIER(Retraso por carga de equipaje)')
 plt.legend()
 plt.show()
