@@ -28,6 +28,9 @@ data = data[datos_analisis]
 limpio = SimpleImputer(strategy='mean')
 data = pd.DataFrame(limpio.fit_transform(data), columns=data.columns) # Creando nuestro Data Frame Final
 
+
+## Parte Clustering 
+
 # Visualizar datos para entender su estructura y distribución
 
 # DEP_TIME: cuanto dura moviendose la aeronave 
@@ -61,4 +64,54 @@ plt.plot(range(2, 11), inercia, marker='o')
 plt.title('Método del Codo para K-means')
 plt.xlabel('Número de Clusters (k)')
 plt.ylabel('Inercia')
+plt.show()
+
+# Elegiiendo el número óptimo de clusters y aplicar K-means
+k_optimo = 4  # Elegir según el análisis anterior
+kmeans = KMeans(n_clusters=k_optimo, random_state=42, n_init=10)
+data['Cluster'] = kmeans.fit_predict(escalados)
+
+# Visualizar clusters por medio de graficos de dispersion
+plt.scatter(data['DEP_TIME'], data['DEP_DELAY'], c=data['Cluster'], cmap='viridis', alpha=0.5) # Modificando la visualizacion de los clusters
+plt.title('Clusters de Vuelos') 
+plt.xlabel('DEP_TIME(Tiempo de retraso aeronave)') # titulo eje x
+plt.ylabel('DEP_DELAY(Retraso en la salida)') # titulo eje y
+plt.show()
+
+## Parte Regresiones 
+
+# Realizando el análisis exploratorio inicial
+variables_predict = data[['DEP_TIME', 'DEP_DELAY']]
+variable_respuesta = 'DELAY_DUE_CARRIER'
+
+# Filtrar solo las filas con retraso o datos para el análisis de regresiones
+retrasos = data[data[variable_respuesta] > 0]
+
+# Seleccionar variables para la regresión
+X = retrasos[['DEP_TIME', 'DEP_DELAY']]
+y = retrasos[variable_respuesta]
+
+# Crear y ajustar el modelo de regresión lineal multiple
+model = LinearRegression()
+model.fit(X, y)
+
+# Graficar la línea de regresión
+plt.scatter(X, y, color='blue', label='Actual')
+plt.plot(X, model.predict(X), color='red', linewidth=2)
+plt.title('Regresión Lineal')
+plt.xlabel('DEP_DELAY')
+plt.ylabel(variable_respuesta)
+plt.legend()
+plt.show()
+
+# Calcular el coeficiente de determinación (R²)
+r2 = model.score(X, y)
+
+# Hacer predicciones utilizando el modelo de regresión y graficar
+y_pred = model.predict(X)
+plt.scatter(X['DEP_DELAY'], y, color='blue', label='Actual')
+plt.scatter(X['DEP_DELAY'], y_pred, color='red', label='Predicción')
+plt.xlabel('DEP_DELAY')
+plt.ylabel(target_variable)
+plt.legend()
 plt.show()
