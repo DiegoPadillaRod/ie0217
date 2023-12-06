@@ -17,7 +17,7 @@ data = data[datos_analisis]
 # Variables para el análisis de clustering
 mis_clusters = data[['Peso', 'Altura']]
 
-# Estandarizando los datos lo llevamos a una media cero 
+# Estandarizando los datos lo llevamos a una media cero
 # y una desviacion estandar de uno
 escalador = StandardScaler()
 escalados = escalador.fit_transform(mis_clusters)
@@ -34,7 +34,7 @@ k_optimo = 5
 kmeans = KMeans(n_clusters=k_optimo, random_state=42, n_init=10)
 data['Cluster'] = kmeans.fit_predict(escalados)
 
-# Visualizar clusters por medio de graficos de dispersion
+# Visualizar clusters 
 plt.scatter(data['Peso'], data['Altura'], c=data['Cluster'],
             cmap='viridis', alpha=0.5) 
 plt.title('Clusters personas') 
