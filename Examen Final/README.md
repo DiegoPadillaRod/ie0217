@@ -81,4 +81,46 @@ cd ".\Examen Final"
 python .\punto2.py
 ```
 
+# 3. Describa una situación en la que se podría utilizar un decorador en Python y proporcione un ejemplo práctico relacionado con el manejo de excepciones.
+## Escenario en que usaria decoradores:
+
+los decoradores le añaden funciones adicionales a funciones existentes.
+
+# 4. Explique el propósito del bloque with en Python y proporcione un ejemplo práctico relacionado con el manejo de archivos.
+
+## Propósito del bloque with:
+
+Es sumamente utilizado en el contexto de obtener datos o archivos externos al programa, nos proporciona una valiosa excepción que nos permite navegar con archivos a nuestro gusto brindándoles un nombre nuevo a la ruta que nos lleva al archivo sin cambiarle el nombre, obtenido sus datos de forma eficiente y mejorando la legibilidad del código, ya que un texto un ejemplo que contiene facturas de un negocio del mes de junio se llama "12452.txt" con "with" podemos llamarlo como facturas_junio, para darle mejor contexto a nuestro código y que sea más coherente.
+
+## Ejemplo específico 
+```
+with open('12452.txt') as facturas_junio:
+    mis_datos = as facturas_junio.read()
+    print(mis_datos)
+```
+
+# 5. Utilizando el conjunto de datos proporcionado (guardado en 'conjunto_datos.csv'), cargue los datos en un DataFrame de pandas. Muestre cómo seleccionar solo las filas donde la edad es mayor a 30.
+
+## Para ejcutar el programa 
+```
+cd ".\Examen Final"
+python .\punto5.py
+```
+
+# 6. Utilizando el conjunto de datos, cree un gráfico de dispersión que represente la relación entre la altura y el peso de los individuos
+
+## Para ejecutar el grafico de dispersion 
+```
+cd ".\Examen Final"
+python .\punto6.py
+```
+
+# 7. Explique en qué situaciones se podría utilizar una regresión lineal y proporcione un ejemplo práctico relacionado con el conjunto de datos.
+
+La regresion lineal nos sirve para obtener la relacion entre 2 variables y conocer en que valores estas tiene mayor porcentaje de match.
+
+## Para ejecutar el regresion lineal
+cd ".\Examen Final"
+python .\punto6.py
+```
 

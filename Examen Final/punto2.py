@@ -13,14 +13,14 @@ class Persona():
     # Mostrando mis datos.
     def mis_datos(self):
         print("Edad: ", self.Edad, "\nAltura: ", self.Altura,
-              "\nPeso: ", self.Peso, "\nMano Dominante: ", self.ManoDominante, 
-              "\nGenero: ", self.Genero) 
+              "\nPeso: ", self.Peso, "\nMano Dominante: ", self.ManoDominante,
+              "\nGenero: ", self.Genero)
 
 
 # Usando Herencia
 class Estudiante(Persona):
 
-    def __init__(self, Edad, Altura, Peso, ManoDominante, Genero, 
+    def __init__(self, Edad, Altura, Peso, ManoDominante, Genero,
                  nombre, calificacion):
         # taryendo a mi constructor
         super().__init__(Edad, Altura, Peso, ManoDominante, Genero)
