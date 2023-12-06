@@ -27,3 +27,58 @@ python3 .\Mis_Datos.py
 ## Estudiante
 # Diego Padilla Rodríguez
 
+# 1. Explique el concepto de herencia en programación orientada a objetos (POO) y proporcione un ejemplo específico relacionado con el conjunto de datos bajo estudio.
+
+## Concepto de Herencia:
+A mi parecer el concepto de herencia se basa más que todo en la similitud, pero no la copia en su totalidad de atributos o métodos de una clase padre hacia una clase hija, la herencia aprovecha las funcionalidades de una clase que puedan ser de ayuda para otra clase con diferente propósito, por ejemplo si yo tendría una clase llamada Perros, y esta proporciona los atributos, raza, color de pelo, tamaño, pelaje y temperamento, yo podría crear una nueva clase llamada Perros_con_pedigree que herede de la clase Perros todos atributos antes mencionado pero ahora en esta clase añadiré, los atributos, linaje, lugar de procedencia, pureza, árbol genealógico y esperanza de vida. 
+
+Por lo tanto, como concepto yo lo establecería como la capacidad de una clase de heredar atributos y métodos de una clase padre, con el propósito de mejorar la legibilidad de mi código, el mantenimiento y la reutilización de código y lógica en general.
+
+
+## Ejemplo específico 
+```
+# Creando mi clase padre
+class Perfil_Individuo():
+
+    # El constructor de mi clase
+    def __init__(self, Edad, Altura, Peso, ManoDominante, Genero):
+
+        self.Edad = Edad
+        self.Altura = Altura
+        self.Peso = Peso
+        self.ManoDominante = ManoDominante
+        self.Genero = Genero
+
+    # Mostrando mis datos.
+    def mis_datos(self):
+        print("Edad: ", self.Edad, "\nAltura: ", self.Altura,
+              "\n...")  # se completan los otros atributos
+
+
+# Creando mi clase hija
+class Me_identifico(Perfil_Individuo):
+    yosoy = " "
+
+    def nombre(self):
+        self.yosoy = "\nHola me llamo Diego"
+        return self.yosoy
+
+
+# Imprimiendo mis resultados
+Perfil_completo = Me_identifico("18", "1.86", "85", "Izq", "Masculino")
+
+Perfil_completo.mis_datos()
+
+print(Perfil_completo.nombre())  # Utilizando mi metodo nuevo de mi clase hijo
+
+```
+
+# 2. Diseñe e implemente una clase llamada Persona con atributos como nombre, edad, y un método que imprima la información de la persona. Luego, herede de la clase Persona para crear una clase Estudiante con atributos adicionales relacionados con el conjunto de datos.
+
+## Para ejcutar el programa 
+```
+cd ".\Examen Final"
+python .\punto2.py
+```
+
+
