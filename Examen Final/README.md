@@ -36,6 +36,14 @@ A mi parecer el concepto de herencia se basa más que todo en la similitud, pero
 
 Por lo tanto, como concepto yo lo establecería como la capacidad de una clase de heredar atributos y métodos de una clase padre, con el propósito de mejorar la legibilidad de mi código, el mantenimiento y la reutilización de código y lógica en general.
 
+Ver codigo herecia.py
+
+## Para ejcutar el programa 
+```
+cd ".\Examen Final"
+python .\herencia.py
+```
+
 
 ## Ejemplo específico 
 ```
