@@ -1,18 +1,8 @@
 # Impotando liberias
 
 import pandas as pd
-
 import matplotlib.pyplot as plt
-
-from sklearn.preprocessing import StandardScaler
-
-from sklearn.model_selection import train_test_split
-
 from sklearn.linear_model import LinearRegression
-
-from sklearn.metrics import mean_squared_error, r2_score
-
-from sklearn.impute import SimpleImputer
 
 # Leyendo y creando mi Data Frame
 data = pd.read_csv('conjunto_datos12670825.csv')
@@ -42,7 +32,7 @@ model.fit(X, y)
 
 # Graficar la línea de regresión
 plt.scatter(X['Peso'], y, color='blue')
-plt.plot(X['Peso'], model.predict(X), color='red', linewidth=2)
+plt.plot(X['Peso'], model.predict(X), color='red', linewidth=0.5)
 plt.title('Regresion Lineal')
 plt.xlabel('Peso')
 plt.ylabel('Edad')

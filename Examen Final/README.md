@@ -26,6 +26,8 @@ python3 .\Mis_Datos.py
 # Respuestas 
 ## Estudiante
 # Diego Padilla Rodríguez
+# Los comandos de ejecución en esta sección están pensados para Windows(Powershell) ver el comando relacionado a Linux en la parte inicial del readme.
+
 
 # 1. Explique el concepto de herencia en programación orientada a objetos (POO) y proporcione un ejemplo específico relacionado con el conjunto de datos bajo estudio.
 
@@ -84,7 +86,7 @@ python .\punto2.py
 # 3. Describa una situación en la que se podría utilizar un decorador en Python y proporcione un ejemplo práctico relacionado con el manejo de excepciones.
 ## Escenario en que usaria decoradores:
 
-los decoradores le añaden funciones adicionales a funciones existentes.
+Los decoradores le añaden funciones adicionales a funciones existentes.
 
 # 4. Explique el propósito del bloque with en Python y proporcione un ejemplo práctico relacionado con el manejo de archivos.
 
@@ -117,10 +119,20 @@ python .\punto6.py
 
 # 7. Explique en qué situaciones se podría utilizar una regresión lineal y proporcione un ejemplo práctico relacionado con el conjunto de datos.
 
-La regresion lineal nos sirve para obtener la relacion entre 2 variables y conocer en que valores estas tiene mayor porcentaje de match.
+La regresion lineal nos sirve para obtener la relacion entre 1 o mas variables independientes con una varible dependiente y conocer en que valores estas tiene mayor porcentaje de match.
 
 ## Para ejecutar el regresion lineal
+```
 cd ".\Examen Final"
 python .\punto6.py
 ```
 
+# 8. Describa el concepto de clustering y proporcione un ejemplo práctico de cómo se podría aplicar al conjunto de datos para identificar grupos de personas
+
+El clustring es una forma de agrupar o datos mejor dicho una técnica para presentar, estudiar y entender un conjunto datos, en principio un cluster nos muestra una cierta cantidad de datos que están alrededor de un dato en específico llamado centroide, en resumen es una método de agrupación de datos que nos permite ver patrones y desarrollar estrategias en base al estudio de estos clusters.
+
+## Para ejecutar grafica con clusters
+```
+cd ".\Examen Final"
+python .\punto8.py
+```
