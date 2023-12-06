@@ -7,7 +7,7 @@
 ***Es importante estar ubicados en el branch main para visualizar el directorio del Examen***
 
 
-**Para motivos de la ejecuación del código añadido en el directorio Examen Final de este repositorio seguir los siguientes pasos**
+**Para motivos de la ejecuación del código con el que obtemos los datos, el cual esta añadido en este directorio ejecutar los siguientes pasos y comandos**
 
 <sub>Pasos a seguir en Windows</sub>
 ```
