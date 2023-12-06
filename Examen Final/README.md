@@ -132,7 +132,7 @@ La regresion lineal nos sirve para obtener la relacion entre 1 o mas variables i
 ## Para ejecutar el regresion lineal
 ```
 cd ".\Examen Final"
-python .\punto6.py
+python .\punto7.py
 ```
 
 # 8. Describa el concepto de clustering y proporcione un ejemplo práctico de cómo se podría aplicar al conjunto de datos para identificar grupos de personas
