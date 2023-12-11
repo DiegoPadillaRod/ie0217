@@ -137,7 +137,7 @@ python .\punto7.py
 
 # 8. Describa el concepto de clustering y proporcione un ejemplo práctico de cómo se podría aplicar al conjunto de datos para identificar grupos de personas
 
-El clustring es una forma de agrupar o datos mejor dicho una técnica para presentar, estudiar y entender un conjunto datos, en principio un cluster nos muestra una cierta cantidad de datos que están alrededor de un dato en específico llamado centroide, en resumen es una método de agrupación de datos que nos permite ver patrones y desarrollar estrategias en base al estudio de estos clusters.
+El clustring es una forma de agrupar datos o mejor dicho una técnica para presentar, estudiar y entender un conjunto datos, en principio un cluster nos muestra una cierta cantidad de datos que están alrededor de un dato en específico llamado centroide, en resumen es una método de agrupación de datos que nos permite ver patrones y desarrollar estrategias en base al estudio de estos clusters.
 
 ## Para ejecutar grafica con clusters
 ```
