@@ -1,7 +1,7 @@
 # Examen Final
 
 
-***Comandos e Informe para Examen Final ***
+**Comandos e Informe para Examen Final **
 
 
 ***Es importante estar ubicados en el branch main para visualizar el directorio del Examen***
